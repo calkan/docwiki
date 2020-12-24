@@ -112,3 +112,12 @@ Reading the entire file (or some of it depending on your loop):
 [Parsing alignment information using HTSlib](https://github.com/calkan/docwiki/blob/main/htslib/parsealignment.md)
 
 [Searching & iterating through mapping intervals](https://github.com/calkan/docwiki/blob/main/htslib/searchiterate.md)
+
+# Cleanup
+
+```
+    bam_destroy1( bam_alignment); /* free alignment pointer */
+    bam_hdr_destroy( bam_header); /* free BAM/CRAM header pointer */
+    hts_idx_destroy( bam_file_index); /* free BAM/CRAM index pointer */
+    return_value = hts_close( bam_file) /* close the BAM/CRAM file */
+```
