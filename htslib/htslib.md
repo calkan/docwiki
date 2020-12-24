@@ -83,8 +83,8 @@ hts_set_fai_filename( bam_file, fai_file); /* pass the reference index to enable
 
 # Information to be read from the header
 
-1. [[Reading the sample name using HTSlib]]
-2. [[Loading library information using HTSlib]]
+1. [Reading the sample name using HTSlib](https://github.com/calkan/docwiki/blob/main/htslib/readsamplename.md)
+2. [Loading library information using HTSlib](https://github.com/calkan/docwiki/blob/main/htslib/loadlibraryinfo.md)
 
 # Reading alignment lines
 
@@ -108,6 +108,6 @@ Reading the entire file (or some of it depending on your loop):
          return_value = sam_read1( bam_file, bam_header, bam_alignment);
 ```
 
-[[Parsing alignment information using HTSlib]]
+[Parsing alignment information using HTSlib](https://github.com/calkan/docwiki/blob/main/htslib/parsealignment.md)
 
-[[Searching & iterating through mapping intervals]]
+[Searching & iterating through mapping intervals](https://github.com/calkan/docwiki/blob/main/htslib/searchiterate.md)
