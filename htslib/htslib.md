@@ -78,6 +78,7 @@ char *fai_file; /* file name for the reference genome FAI index as generated usi
 ```
 bam_file = hts_open( path, "r"); /* open SAM/BAM/CRAM file. htslib automatically detects the format of the file. Returns NULL if there is an error. */
 bam_header = sam_hdr_read(bam_file); /* Read in BAM header information */ 
+bam_file_index = sam_index_load( bam_file, path); /* load BAM/CRAM index */
 hts_set_fai_filename( bam_file, fai_file); /* pass the reference index to enable reading CRAM files */
 ```
 
