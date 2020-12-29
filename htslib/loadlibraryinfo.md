@@ -47,8 +47,8 @@ char ** get_library_names( char* header_text, int no_of_libs)
 	/* Delimit the BAM header text with newlines */
 	i = 0;
 
-	char *tmp_header = NULL;
-	set_str( &( tmp_header), header_text);
+	char *tmp_header = (char *) malloc(sizeof(char) * (strlen(header_text) + 1) );
+	strncpy( tmp_header, header_text, (strlen(header_text) + 1) );
 
 	char* p = strtok_r( tmp_header, "\n", &saveptr_p);
 
