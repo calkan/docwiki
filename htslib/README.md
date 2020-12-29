@@ -1,6 +1,6 @@
 # HTSlib Quick Start Guide
 
-This is a self-derived HTSlib guide. I came up with these use cases mainly by looking at the sam.h file, and trying to implement something. There may be errors. Currently this guide is only for reading SAM/BAM/CRAM files, no functions regarding the SAM/BAM/CRAM file creation are yet written. Also these include support to CRAM format, and HTSlib can autodetect BAM vs CRAM.
+This is a self-derived HTSlib guide. I came up with these use cases mainly by looking at the sam.h file, and trying to implement something. There may be errors. Currently this guide is only for reading SAM/BAM/CRAM files, no functions regarding the SAM/BAM/CRAM file creation are yet written. 
 
 # Disclaimers
 
