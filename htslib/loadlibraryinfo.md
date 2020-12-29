@@ -6,9 +6,9 @@ int get_library_count( char* header_text)
 	int number_of_libraries = 0;
 
 	/* Delimit the BAM header text with newlines */
-	char *tmp_header = NULL;
-	set_str( &( tmp_header), header_text);
-	char* p = strtok( tmp_header, "\n");
+	char *tmp_header = (char *) malloc(sizeof(char) * (strlen(header_text) + 1) );
+	strncpy( tmp_header, header_text, (strlen(header_text) + 1) );
+        char* p = strtok( tmp_header, "\n");
 
 	while( p != NULL)
 	{
