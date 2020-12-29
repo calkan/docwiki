@@ -3,8 +3,8 @@ char *get_sample_name(char* header_text)
 {
 	/* Delimit the BAM header text with tabs and newlines */
 
-	char *tmp_header = NULL;
-	set_str( &( tmp_header), header_text);
+	char *tmp_header = (char *) malloc(sizeof(char) * (strlen(header_text) + 1) );
+	strncpy( tmp_header, header_text, (strlen(header_text) + 1) );
 	char* p = strtok( tmp_header, "\t\n");
 	char sample_name_buffer[1024];
 
