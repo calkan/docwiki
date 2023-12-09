@@ -2,9 +2,17 @@
 
 This guide aims to describe how to push a CV to a GitHub repository, and update the PDF on the repository. Note that Overleaf does not synchronize PDFs to a GitHub repo, therefore they need to be recompiled there. The guide also includes pushing the compiled PDF to another web page repository. In this example, I assumed the web page is hosted as part of a GitHub organization, and the CV repo is owned separately.
 
+Pushing changes from the Overleaf project to the CV repository in GitHub will trigger:
+
+* Update the GitHub repo.
+* Compile PDF using the xu-cheng/latex-action@v3 action. The compiled PDF will be inside a Docker image, this needs to be moved back to the repository itself.
+* Copy the PDF back to the CV repo using the mikeal/publish-to-github-action@master action.
+* Push the PDF to a GitHub page hosted separately as an Organization Web Page, to the desired directory.
+* The Organization Web Page will be rebuilt by the GitHub Pages.
+
 # Disclaimers
 
-* The documentation provided here is unofficial.
+* The documentation provided here is unofficial and probably not the best there can be.
 * This guide does not necessarily represent best practices:
   - Certified ["It works on my machine"](https://blog.codinghorror.com/the-works-on-my-machine-certification-program/)
 * Provided code snippets are likely not optimal, but they do the job.
